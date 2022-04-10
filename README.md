@@ -1,17 +1,18 @@
 ![Screenshot](../main/graphics/ames_iowa.png)
 
-# Ames, Iowa House Cost Predictions
-## Regression Analysis
 
-#### Project Status: [Completed]
+## Regression Modeling: Predicting House Prices in Ames, Iowa
 
-## Project Obective
+
+### Project Obective
 The purpose of this project is to analyze and predict house prices in Ames, Iowa using a dataset which incorporates housing data from 2006 - 2010.
 
-## Project Description
-I was hired by a Construction Firm based in Ames, Iowa, who is looking to invest in a new development. In order to feel confident in their potential future investment, they would first like to evaluate existing homes and their sale price, to be able to identify the types of house features that drive the cost of sale pricing in the area. As the Data Scientist hired for this contract, my intent is to analyze housing data for the years of 2006 - 2010, and build a predictive Linear Regression model to identify those features that correlate strongest with the sale price. In providing this scope of work, my intent is to reinforce their decision that including the features that I suggest, they will be able to build highly profitable homes.
+### Project Description
+The objective for this analysis is to flush out which housing features have the most impact on the sales price of a house, and build a model to accurately predict the price. The modeling featured will include Ordinary Least Squares (OLS) Linear Regression models, Ridge, and Lasso.
 
-This project uses the [`train.csv`](../main/datasets/train.csv) dataset to train the model; however, the final dataset, which was generated from the [top performing model](../main/model_submissions/09_Model_leaderboard.ipynb), is titled [`model_nine_leaderboard.csv`](../main/clean_data/model_nine_leaderboard.csv), can be found in the clean_data folder. Descriptions of the final dataset can found in the [`Data Dictionary`](../main/Data_Dictionary.md):
+The success metric that will be used for this problem is the root mean squared error (RMSE).
+
+This project uses the [`train.csv`](../main/datasets/train.csv) dataset to train the model; however, the final dataset, which was generated from the [top performing model](../main/model_submissions/09_Model_leaderboard.ipynb), titled [`model_nine_leaderboard.csv`](../main/clean_data/model_nine_leaderboard.csv), can be found in the `clean_data` folder. Descriptions of the final dataset can found in the [`Data Dictionary`](../main/Data_Dictionary.md):
 
 ### File Structure
 
@@ -45,8 +46,17 @@ project
       to include Ridge, Lasso, and Polynomial methods.        
 ```
 
+### Brief Analysis
+
+In order to predict an array of sales prices within this dataset, differing methods and models were applied. To evaluate these approaches, it is important to have a benchmark, or baseline, to compare against. In this case, we can use the mean of the Sale Price as the baseline model for evaluation purposes. Using the Root Mean Squared Error (RMSE), which indicates how divergent the prediction is from the actuals, we will assign the baseline model an RMSE of \$79,277.
+
+As stated previously, differing methods were used to predict the sale price with the highest accuracy. To start, Ordinary Least Squares (OLS) Linear Regression models were fit to the data, with an increasing number of Feature Engineered columns, in the attempt of flushing out the strongest linear relationships from the dependent variables to the independent variable. This process lead to many important discoveries that became large contributors to the model, such as multiplying the Overall Quality field with the Year Remodeled/Added or computing the entire house' square footage, for just a couple of examples. After exploring these relationships manually, the next step was to fit [Sklearn's PolynomialFeatures](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html) model to the data, to generate many more relationships. Finally, both Ridge and Lasso models were fit; however, the most useful model did not utilize either of these methods.
+
+
 ### Conclusion
-By fitting Linear Regression, LASSO, and Ridge models against the housing datasets, I was able to identify a number of unique characteristics, aka features, that strongly correlated to sales price. The model that I chose to present to the Construction Firm utilized a Linear Regression model, aided with a log function to normalize the distribution of the Sales Price, which the model uses as its target. Utilizing the existing and/or engineered features, I was able to predict the sales price of a house within $29k.
+
+Evaluating each of these models proved to be great improvements over the aforementioned baseline model. The model which provided the most accurate results was fit using Linear Regression, leveraged many Feature Engineered columns, and was aided with a log function to normalize the distribution of the Sales Price column. This Root Mean Squared Error of the this model indicates that the errors are roughly \$27,194 off from the actual sale prices.
+
 
 
 Image Source: https://nycdatascience.com/blog/student-works/predicting-home-prices-in-ames-ia-using-regression-models/
