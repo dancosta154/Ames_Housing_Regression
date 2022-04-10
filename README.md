@@ -1,8 +1,7 @@
 ![Screenshot](ames_iowa.png)
 
-# Project 2: Regression Analysis
-
-This project is a part of DSIR-EC-124 at [General Assembly](https://generalassemb.ly/). 
+# Ames, Iowa House Cost Predictions
+## Regression Analysis
 
 #### Project Status: [Completed]
 
