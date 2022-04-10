@@ -1,4 +1,4 @@
-![Screenshot](../graphics/ames_iowa.png)
+![Screenshot](../main/graphics/ames_iowa.png)
 
 # Ames, Iowa House Cost Predictions
 ## Regression Analysis
