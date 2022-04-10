@@ -1,4 +1,4 @@
-![Screenshot](ames_iowa.png)
+![Screenshot](../graphics/ames_iowa.png)
 
 # Ames, Iowa House Cost Predictions
 ## Regression Analysis
@@ -18,47 +18,35 @@ This project uses the [`train.csv`](../datasets/train.csv) dataset to train the 
 ```
 project
 │   Data_Dictionary.md
-│   P2_Presentation.mp4
-│   Project Two - Ames Housing Data and Kaggle Challenge.pdf
 │   README.md
 │
 │
 └──clean_data
-│     modeleight_log.csv
+│     Contains CSV outputs from each model
 │         
 │   
 └──datasets
-│     sample_sub_reg.csv
 │     test.csv
 │     train.csv
 │  
 │
 └──graphics
-│     Contains images used for presentation
+│     Contains visualizations generated in modeling
 │      
 │   
 │   
 └──kaggle_submissions
 │     Contains CSV's that were submitted to Kaggle
-│    
+│     
 │          
-└──models
-   │
-   │───best model
-   │     Model_Eight_log.ipynb
-   │   
-   │───Lasso
-   │     Model_Eight_LASSO.ipynb
-   │
-   │───lr
-   │     Contains all non-polynomial models
-   │
-   │───lr - polynomial
-   │     Contains all polynomial models
-   │
-   └───Ridge
-         Model_Eight_Ridge.ipynb        
+└──model_submissions
+      Contains 10 different Linear Regression models.
+      Differing approaches are within each notebook,
+      to include Ridge, Lasso, and Polynomial methods.        
 ```
 
 ### Conclusion
 By fitting Linear Regression, LASSO, and Ridge models against the housing datasets, I was able to identify a number of unique characteristics, aka features, that strongly correlated to sales price. The model that I chose to present to the Construction Firm utilized a Linear Regression model, aided with a log function to normalize the distribution of the Sales Price, which the model uses as its target. Utilizing the existing and/or engineered features, I was able to predict the sales price of a house within $29k.
+
+
+Image Source: https://nycdatascience.com/blog/student-works/predicting-home-prices-in-ames-ia-using-regression-models/
