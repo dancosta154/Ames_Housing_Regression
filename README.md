@@ -11,7 +11,7 @@ The purpose of this project is to analyze and predict house prices in Ames, Iowa
 ## Project Description
 I was hired by a Construction Firm based in Ames, Iowa, who is looking to invest in a new development. In order to feel confident in their potential future investment, they would first like to evaluate existing homes and their sale price, to be able to identify the types of house features that drive the cost of sale pricing in the area. As the Data Scientist hired for this contract, my intent is to analyze housing data for the years of 2006 - 2010, and build a predictive Linear Regression model to identify those features that correlate strongest with the sale price. In providing this scope of work, my intent is to reinforce their decision that including the features that I suggest, they will be able to build highly profitable homes.
 
-This project uses the [`train.csv`](../main/datasets/train.csv) dataset to train the model; however, the final dataset, which was generated from the [top performing model](../main/clean_data/model_nine_leaderboard.csv), is titled [`model_nine_leaderboard.csv`](../main/clean_data/model_nine_leaderboard.csv), can be found in the clean_data folder. Descriptions of the final dataset can found in the [`Data Dictionary`](../main/Data_Dictionary.md):
+This project uses the [`train.csv`](../main/datasets/train.csv) dataset to train the model; however, the final dataset, which was generated from the [top performing model](../main/model_submissions/09_Model_leaderboard.ipynb), is titled [`model_nine_leaderboard.csv`](../main/clean_data/model_nine_leaderboard.csv), can be found in the clean_data folder. Descriptions of the final dataset can found in the [`Data Dictionary`](../main/Data_Dictionary.md):
 
 ### File Structure
 
